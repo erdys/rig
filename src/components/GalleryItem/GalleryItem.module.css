@@ -1,0 +1,43 @@
+.item {
+    width: 100%;
+    border-radius: 0.5rem;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.item:hover .galleryImage {
+    transform: scale(1.2);
+}
+
+.item:after {
+    content: '';
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(57, 57, 57, 0.6);
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' %3F%3E%3Csvg style='enable-background:new 0 0 24 24;' version='1.1' viewBox='0 0 24 24' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill='%23fff'%3E%3Cg id='info'/%3E%3Cg id='icons'%3E%3Cpath d='M22.4,19.6l-4.8-4.8c0.9-1.4,1.4-3,1.4-4.8c0-5-4-9-9-9s-9,4-9,9s4,9,9,9c1.8,0,3.4-0.5,4.8-1.4l4.8,4.8 c0.4,0.4,0.9,0.6,1.4,0.6c1.1,0,2-0.9,2-2C23,20.4,22.8,19.9,22.4,19.6z M5,10c0-2.8,2.2-5,5-5s5,2.2,5,5s-2.2,5-5,5S5,12.8,5,10z' id='search'/%3E%3C/g%3E%3C/svg%3E");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    transform: scale(0);
+    transition: all 0.2s 0.1s ease-in-out;
+    border-radius: 0.5rem;
+}
+
+.item:hover.item:after {
+    transform: scale(1);
+}
+
+.galleryImage {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    object-fit: cover;
+    transition: all 0.2s 0.1s ease-in-out;
+}
